@@ -23,11 +23,32 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.iconDetails {
+  margin-left:2%;
+  margin-right:2%;
+ float:left; 
+ height:100px;
+ width:100px; 
+ } 
+ 
+ .container2 {
+  margin-left:2%;
+  margin-right:2%;
+     height:auto;
+     padding:1%;
+     
+ }
+ h4{margin:0}
+ /* .left {float:left;width:45px;}
+ .right {float:left;margin:0 0 0 5px;width:215px;} */
 
 .App-link {
   color: #61dafb;
 }
-
+.form-check-label
+{
+  color: white;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

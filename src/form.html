@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+</body>
+<script>
+import React,{useState} from 'react'
+
+export default function Form1() {
+    const [text, setText] = useState(0);
+    const handclick =()=>{
+        // console.log("textte here is "+text)
+        let newtext= text.toUpperCase();
+        setText(newtext)
+      
+    //     
+    };
+    const handchange =(event)=>{
+        
+        setText( event.target.value);
+      
+    };
+
+
+    return (
+        <div>
+                    {/* <div className="mb-3 row">
+            <label for="staticEmail" className="col-sm-2 col-form-label">Email</label>
+            <div className="col-sm-10">
+            <input type="text" readonly className="form-control-plaintext" id="staticEmail" value="email@example.com"/>
+            </div> 
+         </div>
+            <div className="mb-3 row">
+                <label for="inputPassword" className="col-sm-2 col-form-label">Password</label>
+                <div className="col-sm-10">
+                <input type="password" className="form-control" id="inputPassword"/>
+                </div>
+            </div>  */}
+            <div className="form-floating">
+                <textarea className="form-control" id="floatingTextarea2 " rows="12" height="900px" widht="500px" value={text}  onChange={handchange} > </textarea>
+                <label for="floatingTextarea2">Comments</label>
+            </div>
+            <button type="button" className="btn btn-primary position-relative" onClick={handclick}>
+                    Convert it to UPPERCASE
+                    <span className="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle" >
+                    </span>
+            </button>
+        </div>
+    )
+}
+
+</script>
+</html>
